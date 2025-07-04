@@ -32,8 +32,8 @@ Upon accessing the SDN analysis view, users are immediately presented with a sum
 
 The following visualization provides an immediate glance at the benign vs. malicious flow distribution:
 
-![Benign vs Malicious](<img width="1422" alt="Screenshot 2025-07-04 alle 16 22 11" src="https://github.com/user-attachments/assets/79a1d26a-8009-473c-a965-8b215689eac0" />
-)
+<img width="1422" alt="Screenshot 2025-07-04 alle 16 22 11" src="https://github.com/user-attachments/assets/79a1d26a-8009-473c-a965-8b215689eac0" />
+
 
 ### 🥧 Malicious Traffic Breakdown
 
