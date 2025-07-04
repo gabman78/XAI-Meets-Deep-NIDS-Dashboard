@@ -1,9 +1,7 @@
-Per eseguire con streamlit tutti i files:
--Mettersi nella cartella Project ed eseguire il comando 
-    streamlit run Home.py
-
-Per eseguire SOLO uno dei files
--Mettersi nella cartella pages ed eseguire il comando
-    streamlit run nomefile.py
-
-NB: se da qualche errore sicuro dovete installare qualche libreria
+To run the entire dashboard with Streamlit:
+Go to the Project folder and execute the command:
+streamlit run Home.py
+To run only a specific file:
+Go to the pages folder and execute the command:
+streamlit run filename.py
+Note: If you encounter any errors, it's likely that you need to install some missing libraries.
