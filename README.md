@@ -82,7 +82,110 @@ A sample of raw SDN flows is made available in a sortable and filterable table. 
 <img width="644" alt="Screenshot 2025-07-04 alle 16 31 34" src="https://github.com/user-attachments/assets/8a5a0810-fd1c-402e-9e78-ecae701461ed" />
 </p>
 
+
 ---
 
-All these elements are rendered with **ECharts**, enabling high-performance, browser-based interactions. This makes the dashboard not only informative but also **highly usable** for security analysts, data scientists, or researchers exploring the dataset behavior in real time.
+## 🧠 Model & SHAP-Based Analysis
 
+The **DL Network Analysis** section of the dashboard allows for interactive exploration of model behavior and explainability through **SHAP (SHapley Additive exPlanations)**. It includes both global and attack-specific insights, highlighting which features and packets are most critical to classification.
+
+## 📊 SHAP-Based Model Analysis
+
+### 🔍 SHAP – 100 Campioni
+
+This interactive chart presents the **median importance** of six features — **PL**, **IAT**, **DIR**, **WIN**, **TTL**, **FLG** — across the first 10 packets of each flow, computed on a sample of 100 malicious flows.  
+
+🎛️ Users can **toggle individual features** or **select specific packets** to focus the analysis on areas of interest.
+
+<p align="center">
+ <img width="687" alt="Screenshot 2025-07-04 alle 16 38 08" src="https://github.com/user-attachments/assets/5ff4519c-6a86-4af9-b6c4-449c9d0289d6" />
+
+</p>
+
+🧠 **Insight**: Features from the first 4 packets — especially the **TTL of packet 4** — stand out as the most influential.
+
+---
+
+### 🎯 SHAP‑Guided Attack Success Rate
+
+An adversarial experiment on 100 correctly classified malicious flows used SHAP to modify only the **TTL of packet 4**.
+
+<p align="center">
+<img width="672" alt="Screenshot 2025-07-04 alle 16 38 19" src="https://github.com/user-attachments/assets/99e3a1f9-3162-472c-b652-72f411e51be4" />
+
+</p>
+
+✅ **Result**: **94% success rate** — showing a **potential vulnerability** in this core decision feature.
+
+---
+
+### 📈 Performance per Class
+
+Explore the model's metrics interactively by hovering over bars to see customized details.
+
+<p align="center">
+<img width="676" alt="Screenshot 2025-07-04 alle 16 38 28" src="https://github.com/user-attachments/assets/257ace5f-978f-4d07-948a-05b3eaf9bf0e" />
+
+</p>
+
+
+---
+
+### 📂 SHAP per Categorie di Attacco
+
+This section offers **dynamic SHAP views by attack category** (for BFA, DDoS, Dos and Probe), with filtering via dropdown selectors.
+
+<p align="center">
+ <img width="684" alt="Screenshot 2025-07-04 alle 16 38 47" src="https://github.com/user-attachments/assets/49cb48a2-0ab7-4c7b-bca5-e4913ad8fb91" />
+
+</p>
+
+#### In the example: **Brute Force Attack (BFA)**  
+- Visualize per-feature importance for **pkt 1–10**, filtered to highlight **TTL and DIR** on **packet 4**
+
+
+---
+
+### 🎣 Risultati modificando feature casuali su 100 campioni
+
+Dynamic table with sorting and filtering by **packet number**, **feature**, and **success rate**.
+
+<p align="center">
+  <img width="681" alt="Screenshot 2025-07-04 alle 16 39 02" src="https://github.com/user-attachments/assets/567c14a3-9061-4943-83ce-ae3f742ba857" />
+
+</p>
+
+📝 Only modifications to **TTL** and **WIN** succeeded in altering classifications.
+
+---
+
+### 🎯 Media Successi per Feature
+
+This bar chart allows toggling features and inspecting **average success rates** per feature interactively.
+
+<p align="center">
+ <img width="510" alt="Screenshot 2025-07-04 alle 16 40 24" src="https://github.com/user-attachments/assets/c05b2914-903f-4497-a5c4-cdeaabe565bf" />
+
+</p>
+
+✅ **TTL remains the most effective feature**, even in non-guided attacks.
+
+---
+
+### 🧪 Distribuzione TTL – Pacchetto 4
+
+An interactive histogram comparing **TTL values of packet 4** for benign vs malicious flows. Users can **filter by class** and hover to read exact counts.
+
+<p align="center">
+<img width="673" alt="Screenshot 2025-07-04 alle 16 41 03" src="https://github.com/user-attachments/assets/0c41437b-4084-4513-ae7c-36b420ecd84d" />
+
+</p>
+
+- **Benign flows**: Diverse TTL distribution (`128`, `64`, `-1`)  
+- **Malicious flows**: Concentration at `-1` (padding)
+
+📌 The **`-1` TTL value** proved critical in distinguishing classes — information revealed interactively by the histogram.
+
+---
+
+🔧 All charts are built with **Apache ECharts** and embedded via **Streamlit**, allowing real-time filtering, toggling of features/packets, tooltip inspection and zoom/pan interactions — empowering analysts to conduct a **deep-dive, customized exploration** of model behavior.
