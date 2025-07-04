@@ -43,10 +43,10 @@ To further detail the malicious flows, the dashboard includes:
 
 All charts are **interactive**, allowing users to hover and isolate specific segments:
 
-![Donut Chart](<img width="1424" alt="Screenshot 2025-07-04 alle 16 22 24" src="https://github.com/user-attachments/assets/edf11e57-e94b-439d-933e-2b8ffcd22b5b" />
-)
-![Malicious Pie Chart](<img width="706" alt="Screenshot 2025-07-04 alle 16 22 32" src="https://github.com/user-attachments/assets/28b6b94b-9a01-4421-ba46-59f327459e06" />
-)
+<img width="1424" alt="Screenshot 2025-07-04 alle 16 22 24" src="https://github.com/user-attachments/assets/edf11e57-e94b-439d-933e-2b8ffcd22b5b" />
+
+<img width="706" alt="Screenshot 2025-07-04 alle 16 22 32" src="https://github.com/user-attachments/assets/28b6b94b-9a01-4421-ba46-59f327459e06" />
+
 
 ### 📦 Statistical Visualizations
 
@@ -66,8 +66,8 @@ All charts are interactive and rendered using **Apache ECharts**, enabling respo
 
 Example:
 
-![Boxplot](<img width="754" alt="Screenshot 2025-07-04 alle 16 22 50" src="https://github.com/user-attachments/assets/42be0b76-2f4d-45d7-bee3-8626da184dec" />
-)
+<img width="754" alt="Screenshot 2025-07-04 alle 16 22 50" src="https://github.com/user-attachments/assets/42be0b76-2f4d-45d7-bee3-8626da184dec" />
+
 
 ### 🧾 Data Table Sampling
 
@@ -75,8 +75,8 @@ A sample of raw SDN flows is made available in a sortable and filterable table. 
 - Choose the number of rows to display
 - Filter columns individually to focus on specific values
 
-![Sample Table](<img width="738" alt="Screenshot 2025-07-04 alle 16 22 40" src="https://github.com/user-attachments/assets/f5c155c4-0ccb-4d6b-81be-62fd03a54068" />
-)
+<img width="738" alt="Screenshot 2025-07-04 alle 16 22 40" src="https://github.com/user-attachments/assets/f5c155c4-0ccb-4d6b-81be-62fd03a54068" />
+
 
 ---
 
