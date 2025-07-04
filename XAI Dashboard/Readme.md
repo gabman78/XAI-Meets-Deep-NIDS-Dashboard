@@ -1,7 +1,15 @@
-To run the entire dashboard with Streamlit:
-Go to the Project folder and execute the command:
+## Avviare la Dashboard con Streamlit
+
+### Eseguire l'intera Dashboard
+
+Per eseguire l'intera applicazione, apri il terminale, vai nella cartella principale del progetto ed esegui:
+
+```bash
 streamlit run Home.py
-To run only a specific file:
-Go to the pages folder and execute the command:
-streamlit run filename.py
-Note: If you encounter any errors, it's likely that you need to install some missing libraries.
+Eseguire una Singola Pagina
+Per eseguire solo una specifica pagina, accedi alla cartella pages e avvia il file desiderato:
+```bash
+cd pages
+streamlit run nome_file.py
+Nota:
+Se riscontri errori, è probabile che tu debba installare alcune librerie mancanti. Assicurati di aver installato tutti i requisiti
